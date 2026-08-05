@@ -92,12 +92,13 @@ spack:
     needs: [gcc]
 {% endif %}
     specs:
+    - 'intel-oneapi-compilers'
 {% for spec in compilers['intel-classic'].specs %}
     - '{{ spec }}'
 {% endfor %}
     override:
       concretizer:
-        unify: when_possible
+        unify: true
         reuse: false
 
 {% endif %}
