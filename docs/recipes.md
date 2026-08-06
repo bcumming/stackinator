@@ -118,6 +118,7 @@ The compilers are built in multiple stages:
     * `intel-oneapi:version`: The version of the oneAPI compilers (spack package `intel-oneapi-compilers`)
 1. *intel-classic*: (optional) The classic Intel (`icc`/`icpc`/`ifort`) toolchain is built using the gcc toolchain installed in step 1.
     * `intel-classic:version`: The version of the classic compilers (spack package `intel-oneapi-compilers-classic`)
+    * **note**: the intel-classic compiler is used to provide a compiler, and will install a copy of `intel-oneapi-compilers` to provide the C and C++ compilers.
 
 The first step - building `gcc` - is required, so that the simplest stack will provide at least one version of gcc compiled for the target architecture.
 
